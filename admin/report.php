@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if(!isset($_SESSION['user_name'])){
+   header("Location:login.php");
+}
+?>
 <html lang="en">
 
 <head>
@@ -23,7 +30,7 @@
 <body>
 <?php
  include('adminpanel/navbar.html');
- include('adminpanel/header.html');
+ include('adminpanel/header.php');
  ?>
 
    <!-- Content Row -->
@@ -68,7 +75,7 @@
             </div>
 
     
-            <!-- Pending Requests Card Example -->
+            
                 <div class="col-xl-3 col-md-6 mb-4">
               <a href="salesreport.php">  <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">

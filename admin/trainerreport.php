@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if(!isset($_SESSION['user_name'])){
+   header("Location:login.php");
+}
+?>
 <html lang="en">
 
 <head>
@@ -31,7 +38,7 @@
 
           <!-- Page Heading -->
         <nav class="navbar navbar-expand navbar  topbar mb-4 static-top shadow">
-          <h2 style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Trainers Report</h2>
+          <h2 style="text-align: center;"></h2>
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -50,10 +57,19 @@
        </nav>
 
 
-       <h1 style="text-align: center; " class="text-primary">Report </h1><br>
+       <h1 style="text-align: center; " class="text-primary">Trainers Report </h1><br>
 <p>As generated on</p>
         <p id="demo"></p>
-       <h2>Trainer info</h2>
+       <h2 style="text-align: center;">Trainer info</h2>
+       <div class="card-body">
+  <div class="table-responsive">
+                <table class="table table-striped table-light" id="dataTable" width="100%" cellspacing="10"> 
+                  <thead class="dark">  
+                    <th>First Name</th>
+                    <th>Last Namw</th>
+                    <th>Specialization</th>
+                    <th>Salary</th>
+                  </thead>
       
        <?php
         include('db.php');
@@ -64,17 +80,26 @@
         while($row=mysqli_fetch_array($exec))
         {
           echo '
+              <tr>
+              <td>'.$row["fname"].' </td>
+              <td> '.$row["lname"].'</td>
+              <td>Specializes in '.$row["specialization"].'</td>
+              <td>Cost to Company : '.$row["salary"].' /- month</td>
+              <tr>
 
-              <h4>Trainer name :'.$row["fname"].'  '.$row["lname"].'</h2>
-              <h4>Specializes in '.$row["specialization"].'</h3>
-              <h4>Cost to Company : '.$row["salary"].' /- month</h3>
-              <br>
+             
             ';
 
           
          }
+         ?>
+
+       </table>
+     </div>
+     <h3> Trainer Activity </h3>
+     <?php
          while ($row2=mysqli_fetch_array($exec2)) {
-          echo '<h3> Trainer Activity </h3><h4> 
+          echo '<h5> 
                         Trainer ID :
                                     '.$row2["trainerid"].' 
 
@@ -82,23 +107,27 @@
                                    '.$row2["fname"].'
                                     '.$row2["lname"].'
 
-                        Trains 
+                        trains 
                                     '.$row2["firstname"].'
 
                                     '.$row2["lastname"].'
                         who has opted the package '.$row2["name"].'
 
 
-                   </h4> <br>    ';
+                   </h5> <br>    ';
 
 
 
            # code...
          }
+        ?>
+<h3>Equipment Handling</h3>
+
+        <?php
       while($row3=mysqli_fetch_array($exec3))
       {
 
-        echo '<h3>Equipment Handling</h3>
+        echo '
         <h4>
         Trainer ID :
                                     '.$row3["trainerid"].' 
@@ -136,9 +165,8 @@
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/datatables-demo.js"></script>
- <script>
-    function printcontent(e1){
+<script>
+   function printcontent(e1){
       var restorepage=document.body.innerHTML;
       var printContent=document.getElementById(e1).innerHTML;
       document.body.innerHTML=printContent;
@@ -146,10 +174,14 @@
       document.body.innerHTML=restorepage;
     }
   </script>
+
+
   <script>
 var d = new Date();
 document.getElementById("demo").innerHTML = d;
 </script>
 
+
+          
 
           

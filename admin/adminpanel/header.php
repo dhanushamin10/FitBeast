@@ -1,3 +1,4 @@
+
    <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -25,7 +26,7 @@
 
                 <img class="img-profile rounded-circle" src="https://sophosnews.files.wordpress.com/2014/04/anonymous-250.jpg?w=250 ">
               
-                <span class="mr-2 d-none d-lg-inline text-gray-600 small">&nbsp;&nbsp;Cypher </span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">&nbsp;&nbsp;<?php echo " ".$_SESSION['user_name']?> </span>
             
               </a>
               <!-- Dropdown - User Information -->
@@ -36,7 +37,7 @@
                 </a>
             
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="FitBeast/admin/logut.php" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>

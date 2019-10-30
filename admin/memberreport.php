@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+if(!isset($_SESSION['user_name'])){
+   header("Location:login.php");
+}
+?>
 <html lang="en">
 
 <head><style>
@@ -136,7 +143,7 @@
           echo ' 
 
           <h5>
-          Member ID :
+         • Member ID :
                                     '.$row2["memberid"].' 
 
 
@@ -196,7 +203,7 @@
 
 
 
->
+  
 
 
       </div>
