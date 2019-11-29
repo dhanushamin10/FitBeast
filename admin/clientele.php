@@ -62,6 +62,7 @@ if(!isset($_SESSION['user_name'])){
                                     <td>Email</td>  
                                     <td>Join Date</td>
                                     <td>Package</td>
+                                    <td>hours</td>
 
                                     <td>Update</td>
                                      <td>Delete</td>
@@ -81,6 +82,7 @@ if(!isset($_SESSION['user_name'])){
                                     <td>'.$row["email"].'</td>  
                                     <td>'.$row["joindate"].'</td> 
                                     <td>'.$row["package"].'</td> 
+                                    <td>'.$row['hours'].'</td>
 
                                     <td><a class="btn btn-info" href="memberedit.php?id='.$row['memberid'].'">Edit</a></td>
                                     <td><a class="btn btn-info" href="deletemember.php?id='.$row['memberid'].'">Delete</a></td>

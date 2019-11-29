@@ -82,27 +82,42 @@ if(!isset($_SESSION['user_name'])){
         }
         ?>
       </table><br>
+      <div class="card-body">
+            <div class="card-header" style="text-align: center;"><h3></h3></div>
+  <div class="table-responsive">
+                <table class="table table-striped table-light" id="dataTable" width="100%" cellspacing="10"> 
+                  <thead class="">  
+                    <th>Payment ID</th>
+                    <Th>Customer Name</Th>
+                  <th>Item ID</Th>
+                    <th>Item Name </th>
+                    <th>Amount</th>
+                    <th>Payment Mode</th>
+                </thead>
+
       <h3>Sales Activity</h3>
 <?php
   $exec3=mysqli_query($con,"select *  from payments P,member M,inventory I where P.itemid=i.itemid and M.memberid=P.memberid");
   while($row2=mysqli_fetch_array($exec3))
 echo '
-   <h5> • Transaction id : '.$row2["paymentid"].'<br>
+<tr>
+   <td>  '.$row2["paymentid"].'</td> 
+  <td> '.$row2["firstname"].'  
+    '.$row2["lastname"].'</td>
+  <td> '.$row2["itemid"].' </td>
 
-    '.$row2["firstname"].'  
-    '.$row2["lastname"].'
-    has Bought Item ID '.$row2["itemid"].' 
-    '.$row2["itemname"].' which amounts to 
-    ₹'.$row2["price"].' with Transaction mode : '.$row2["mode"].'
-    <br>
-
+  <td>  '.$row2["itemname"].' </td>
+   <td> ₹'.$row2["price"].' </td>
+   <td> '.$row2["mode"].'</td>
+   
+</tr>
 
 
 
 
 ';
 ?>
-
+</table>
 <?php
        $result =mysqli_query($con,"select sum(I.price) from payments P,inventory I where I.itemid=P.itemid");
             $row = mysqli_fetch_array($result);

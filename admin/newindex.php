@@ -1,10 +1,41 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <?php
 session_start();
 
 if(!isset($_SESSION['user_name'])){
    header("Location:login.php");
 }
+
+include('db.php');
+$myqry="select * from member";
+$exec=mysqli_query($con,$myqry);
+while($rowmy=mysqli_fetch_array($exec))
+{
+  $x=$rowmy['hours'];
+  if($x==0)
+  {
+    echo "
+        <script>
+        alert('Client Packages have expired.Please check Expired packages.');
+    
+        </script>
+
+
+        ";
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 ?>
 <html lang="en">
 
@@ -82,20 +113,20 @@ if(!isset($_SESSION['user_name'])){
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">₹<?php
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Expired Packages</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
               $con = mysqli_connect("localhost","root","","fitbeasttest1");
 
 
 
-            $result =mysqli_query($con,"select sum(I.price) from payments P,inventory I where I.itemid=P.itemid");
+            $result =mysqli_query($con,"select count(*) from member where hours=0");
             $row = mysqli_fetch_array($result);
             $total = $row[0];
             echo "" . $total." ";
               ?></div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-rupee-sign fa-2x text-gray-300"></i>
+                      <i class="fas fa-user-alt-slash fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>
@@ -104,11 +135,11 @@ if(!isset($_SESSION['user_name'])){
 
             <!-- Earnings (Monthly) Card Example -->
             <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-info shadow h-100 py-2">
+           <a href="complaints.php" style="text-decoration:none">   <div class="card border-left-info shadow h-100 py-2">
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Packages to choose from</div>
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Complaints to be resolved</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php
@@ -116,17 +147,17 @@ if(!isset($_SESSION['user_name'])){
 
 
 
-            $result = mysqli_query($con,"select count(1) FROM package");
+            $result = mysqli_query($con,"select count(1) FROM complaints");
             $row = mysqli_fetch_array($result);
             $total = $row[0];
             echo "" . $total." ";
-              ?> </div>
+              ?> </div></a> 
                         </div>
                         
                       </div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                      <i class="fas fa-skull-crossbones fa-2x text-gray-300"></i>
                     </div>
                   </div>
                 </div>

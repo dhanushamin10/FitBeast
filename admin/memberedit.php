@@ -64,6 +64,9 @@ $res=mysqli_fetch_array($sql);
           <div class="form-group">
          <input type="text" name="package"  class="form-control my-input" value="<?php echo $res['package']?>">
         </div>
+         <div class="form-group">
+         <input type="text" name="hours"  class="form-control my-input" value="<?php echo $res['hours']?>">
+        </div>
         
         <div class="text-center ">
          <button type="submit" name="add" class=" btn btn-block send-button tx-tfm">Update</button>
@@ -88,7 +91,8 @@ if(isset($_POST['add']))
   $n2=$_POST['contact'];
   $n3=$_POST['email'];
   $n4=$_POST['package'];
-  $qry=mysqli_query($con,"UPDATE `member` SET `firstname`='$n',`lastname`='$n1',`contact`='$n2',`email`='$n3',`package`='$n4' WHERE `memberid`='$id'")or die(mysqli_error($con));
+   $n5=$_POST['hours'];
+  $qry=mysqli_query($con,"UPDATE `member` SET `firstname`='$n',`lastname`='$n1',`contact`='$n2',`email`='$n3',`package`='$n4',`hours`='$n5' WHERE `memberid`='$id'")or die(mysqli_error($con));
   if($qry==true)
   {
 

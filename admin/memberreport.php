@@ -126,6 +126,21 @@ if(!isset($_SESSION['user_name'])){
 
 
     <h4> Member Activity</h4>
+    <div class="card-body">
+  <div class="table-responsive">
+                <table class="table table-striped table-light" id="dataTable" width="100%" cellspacing="10"> 
+                  <thead class="">  
+                               <tr>  
+                                    <th>Memberid</th>  
+                                    <th>Name</th> 
+                                    <th>Trainer name</th>
+                                    <th>Package Name</th> 
+                                    <th>Price</th>
+
+                                     
+                                    
+                               </tr>  
+                          </thead>  
 
       
        <?php
@@ -140,31 +155,27 @@ if(!isset($_SESSION['user_name'])){
 
         while($row2=mysqli_fetch_array($exec2))
         {
-          echo ' 
-
-          <h5>
-         • Member ID :
-                                    '.$row2["memberid"].' 
+          echo ' <tr>
+<td>
+                                    '.$row2["memberid"].' </td>
 
 
-                                   '.$row2["firstname"].'
-                                    '.$row2["lastname"].'
+                             <td>      '.$row2["firstname"].'
+                                    '.$row2["lastname"].'</td>
 
+                              <td>  '.$row2["fname"].'
+                                    '.$row2["lname"].'</td>
 
-                    is trained by   '.$row2["fname"].'
-                                    '.$row2["lname"].'
-
-                      has opted package 
-                                    '.$row2["name"].'
-
-                      which amounts to : ₹'.$row2["price"].'
+                             <td>       '.$row2["name"].'</td>
+                                <Td> ₹'.$row2["price"].'</td>
 
 
 
-</h5><BR>
+</tr>
 
           ';
-        }
+        } ?></table>
+        <?php
  $row = mysqli_fetch_array($exec3);
             $total = $row[0];
             echo '<br><h4>

@@ -96,51 +96,65 @@ if(!isset($_SESSION['user_name'])){
 
        </table>
      </div>
-     <h3> Trainer Activity </h3>
+     <h3 style="text-align: center;"> Trainer Activity </h3>
+       <div class="table-responsive">
+                <table class="table table-striped table-light" id="dataTable" width="100%" cellspacing="10"> 
+                  <thead class="dark">  
+                    <th>Trainer ID</th>
+                    <th>Trainer Name</th>
+                    <th>Trained CLient</th>
+                    <th>Package</th>
+                  </thead>
      <?php
          while ($row2=mysqli_fetch_array($exec2)) {
-          echo '<h5> 
-                        Trainer ID :
-                                    '.$row2["trainerid"].' 
+          echo '<tr> 
+                        <td>
+                                    '.$row2["trainerid"].' </td>
 
 
-                                   '.$row2["fname"].'
-                                    '.$row2["lname"].'
+                          <td>         '.$row2["fname"].'
+                                    '.$row2["lname"].'</td>
 
-                        trains 
+                    <td>
                                     '.$row2["firstname"].'
 
-                                    '.$row2["lastname"].'
-                        who has opted the package '.$row2["name"].'
+                                    '.$row2["lastname"].'</td>
+                        <td> '.$row2["name"].'</td>
 
 
-                   </h5> <br>    ';
+            </tr>   ';
 
 
 
            # code...
          }
-        ?>
-<h3>Equipment Handling</h3>
+        ?></table>
+<h3 style="text-align: center;">Equipment Handling</h3>
+ <div class="table-responsive">
+                <table class="table table-striped table-light" id="dataTable" width="100%" cellspacing="10"> 
+                  <thead class="dark">  
+                    <th>Trainer ID</th>
+                    <th>Trainer Name</th>
+                    <th>Equipment ID</th>
+                    <th>Eqiupment Name</th>
+                  </thead>
 
         <?php
       while($row3=mysqli_fetch_array($exec3))
       {
 
-        echo '
-        <h4>
-        Trainer ID :
-                                    '.$row3["trainerid"].' 
+        echo '<tr>
+    
+                                <td>    '.$row3["trainerid"].' </td>
 
 
-                                   '.$row3["fname"].'
-                                    '.$row3["lname"].'
+                               <td>    '.$row3["fname"].'
+                                    '.$row3["lname"].'</td>
 
-                       Handles Equipment ID :
-                                    '.$row3["equipmentid"].'
-
-                                Name :    '.$row3["name"].'
-                                <br><img style="width:10%; height=10%;" src="data:image/jpeg;base64,'.base64_encode($row3["image"]).'"/><br>
+                    
+                                 <td>   '.$row3["equipmentid"].'</td>
+                                      <td>   '.$row3["name"].'</td>
+                               <td><img style="width:10%; height=10%;" src="data:image/jpeg;base64,'.base64_encode($row3["image"]).'"/><td>
                                        
                        
 
