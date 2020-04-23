@@ -320,7 +320,7 @@ label:hover:before {
 $id=$_GET['id'];
 
 
- $con = mysqli_connect("localhost","root","","fitbeasttest1");
+include('db.php');
 
 global $value;
 

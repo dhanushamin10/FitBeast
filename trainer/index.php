@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_name'])){
    header("Location:trainerlogin.php");
 }
 
- $con = mysqli_connect("localhost","root","","fitbeasttest1");
+ include("db.php");
 
  
 

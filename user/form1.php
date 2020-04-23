@@ -13,7 +13,7 @@
 
 <?php
 
- $con = mysqli_connect("localhost","root","","fitbeasttest1");
+ include("db.php");
 $id=20;
 global $value;
 

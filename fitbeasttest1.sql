@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fitbeasttest1`
+-- Database: `id13098182_fitbeast`
 --
 
 -- --------------------------------------------------------

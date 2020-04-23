@@ -2,7 +2,7 @@
 	session_start();
 
 
- $con = mysqli_connect("localhost","root","","fitbeasttest1");
+	include("db.php");
 
 
 
