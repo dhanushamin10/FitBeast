@@ -60,12 +60,19 @@ if($x==0)
 
   <!-- Custom styles for this template -->
   <link href="css1/resume.min.css" rel="stylesheet">
+  <style>
+  body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+  </style>
 
 </head>
 
 <body id="page-top">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="sideNav">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
 
       <span class="d-block d-lg-none"></span>

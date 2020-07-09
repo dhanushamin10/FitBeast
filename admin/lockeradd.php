@@ -34,7 +34,7 @@ if(!isset($_SESSION['user_name'])){
    <div class="container">
     
       <?php  
- $connect = mysqli_connect("localhost", "root", "", "fitbeasttest1");  
+ include("db.php");
  $query ="SELECT * FROM locker where lockerid not in (select lockerid from assign )";  
  $result = mysqli_query($connect, $query);  
  ?>  

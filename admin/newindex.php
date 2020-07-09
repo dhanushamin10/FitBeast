@@ -89,7 +89,7 @@ while($rowmy=mysqli_fetch_array($exec))
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800">₹<?php
-              $con = mysqli_connect("localhost","root","","fitbeasttest1");
+               include("db.php");
 
 
 
@@ -115,7 +115,7 @@ while($rowmy=mysqli_fetch_array($exec))
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Expired Packages</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
-              $con = mysqli_connect("localhost","root","","fitbeasttest1");
+               include("db.php");
 
 
 
@@ -143,7 +143,7 @@ while($rowmy=mysqli_fetch_array($exec))
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
                           <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php
-              $con = mysqli_connect("localhost","root","","fitbeasttest1");
+              include("db.php");
 
 
 
@@ -172,7 +172,7 @@ while($rowmy=mysqli_fetch_array($exec))
                     <div class="col mr-2">
                       <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Members in the Gym</div>
                       <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
-              $con = mysqli_connect("localhost","root","","fitbeasttest1");
+               include("db.php");
 
 
 

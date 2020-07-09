@@ -33,9 +33,9 @@ if(!isset($_SESSION['user_name'])){
   
 
       <?php  
- $connect = mysqli_connect("localhost", "root", "", "fitbeasttest1");  
+  include("db.php"); 
  $query ="SELECT * FROM member order by lastname desc";  
- $result = mysqli_query($connect, $query);  
+ $result = mysqli_query($con, $query);  
  ?>  
  
            <div class="container-fluid">

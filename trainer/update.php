@@ -337,7 +337,7 @@ if(isset($_POST['submit']))
   $qry=mysqli_query($con,"UPDATE `member` SET `hours`='$value' WHERE `memberid`='$id'")or die(mysqli_error($con));
   echo"<script>
 				alert('Updated');
-				window.location.assign('index.php');
+				
 				</script>";
  }
 

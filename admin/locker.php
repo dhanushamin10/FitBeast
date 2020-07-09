@@ -33,9 +33,9 @@ if(!isset($_SESSION['user_name'])){
   
 
  <?php  
- $connect = mysqli_connect("localhost", "root", "", "fitbeasttest1");  
+ include("db.php");  
  $query ="select A.lockerid,L.type,A.memberid,M.firstname,M.lastname from assign A,locker L,member M where L.lockerid=A.lockerid and A.memberid=M.memberid";
- $result = mysqli_query($connect, $query);  
+ $result = mysqli_query($con, $query);  
  ?>  
  
            <div class="container-fluid">

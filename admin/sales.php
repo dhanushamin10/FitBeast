@@ -33,9 +33,9 @@ if(!isset($_SESSION['user_name'])){
 
 
       <?php  
- $connect = mysqli_connect("localhost", "root", "", "fitbeasttest1");  
+ include("db.php");
  $query ="select P.paymentid,I.itemid,I.itemname,P.memberid,I.price,P.mode from payments P,inventory I where P.itemid=I.itemid"; 
- $result = mysqli_query($connect, $query);  
+ $result = mysqli_query($con, $query);  
  ?>  
  
            <div class="container-fluid">
