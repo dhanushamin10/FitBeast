@@ -1,2 +1,2 @@
 Fitness centre management system using php and mysql.
-![GitHub Logo](/images/logo.png)
+![Screenshots](/img/fit2_macbookpro15_front.png)
