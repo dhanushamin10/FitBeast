@@ -1,8 +1,13 @@
 # FitBeast 
 ## A web application for managing the various activities of a fitness center.
 ## Features
-<div style="display:flex;">
+<
 ### For Owners
+<div class="border d-flex">
+  <div class="p-5 border bg-gray-light">flex item 1</div>
+  <div class="p-5 border bg-gray-light">flex item 2</div>
+  <div class="p-5 border bg-gray-light">flex item 3</div>
+</div>
 <ul>
   <li>Customer Management</li>
   <li>Employee Management</li>
