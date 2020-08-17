@@ -11,19 +11,25 @@
   <li>Equipments Management</li>
   <li>Package Management</li>
 </ul>
+
 ### For Members
+
 <ul>
   <li>Trainers Catalogue</li>
   <li>Shop Feature</li>
   <li>Package Catalogue</li>
 </ul>
+
 ### For Trainers
+
 <ul>
   <li>Students info</li>
   <li>Package Updation Feature</li>
   <li>Handled Equipment Management</li>
 </ul>
+
 ## Tech Stack
+
 <img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
 <img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
 <img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
