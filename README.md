@@ -1,13 +1,17 @@
 # FitBeast 
 ## A web application for managing the various activities of a fitness center.
+
+## Tech Stack
+
+<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
+<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
+<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />
+<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" />
+<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/php/php.png" /><br/>
+
 ## Features
-<
+
 ### For Owners
-<div class="border d-flex">
-  <div class="p-5 border bg-gray-light">flex item 1</div>
-  <div class="p-5 border bg-gray-light">flex item 2</div>
-  <div class="p-5 border bg-gray-light">flex item 3</div>
-</div>
 <ul>
   <li>Customer Management</li>
   <li>Employee Management</li>
@@ -35,11 +39,7 @@
 </ul>
 </div>
 
-## Tech Stack
 
-<img align="left" alt="HTML5" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />
-<img align="left" alt="CSS3" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />
-<img align="left" alt="JavaScript" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" /><br/>
 
 ## Mock ups!
 ## Admin Panel (for owners)
